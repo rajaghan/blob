@@ -59,6 +59,7 @@ public class BlobController {
 		InputStream byte_stream = myblob.getBinaryStream();
 		
 		response.addHeader("Content-disposition", "attachment");
+//		response.addHeader("Content-disposition", "attachment;filename=myfilename.txt");
 
 		IOUtils.copy(byte_stream, response.getOutputStream());
 		
